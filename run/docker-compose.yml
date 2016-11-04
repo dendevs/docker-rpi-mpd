@@ -1,0 +1,9 @@
+mpd:
+    image: dendev/rpi-mpd
+    ports:
+        - "6600:6600"
+        - "6680:6680"
+    volumes:
+        - $PWD/mpd/data/music:/var/lib/mpd/music:ro
+    devices:
+        - /dev/snd
